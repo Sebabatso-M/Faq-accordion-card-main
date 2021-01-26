@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -31,7 +33,7 @@ body{
 }
 
 #illustrations{
-    height: 90px;
+    min-height: 90px;
     position: relative;
 }
 
@@ -39,11 +41,15 @@ img{
     position: absolute;
 }
 
-#woman-img{
+.desktop-imgs{
+        display: none;    
+}
+
+#woman-img-mobile{
     top:-105px;
     left:8px;
 }
-#bg-pattern{
+#bg-pattern-mobile{
     top:5px;
     left: 35px;
 }
@@ -112,6 +118,8 @@ li{
     transform: rotate(180deg);
 }
 
+
+
 @media screen and (max-height: 490px){
     body{
         min-height: 170vh;
@@ -120,4 +128,67 @@ li{
     #container{
         top: 20%;
     }
+}
+
+@media screen and (min-width: 675px){
+
+    .desktop-imgs{
+            display: block;    
+    }
+
+    #container{
+        flex-direction: row;
+        width: 65vw;
+        align-items: center;
+        min-height: 420px;
+        
+    }
+
+    #illustrations{
+        width:40%;
+        height: 455px;
+    }
+
+    #faq-container{
+        width: 30%;
+        margin-right: 100px;
+        padding:25px 0;
+    }
+
+    h1{
+        text-align: left;
+    }
+
+    .mobile-img{
+        display: none;    
+    }
+
+    #illustrations-sub-container{
+        overflow:hidden;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    #bg-pattern-desktop{
+        width: 750px;
+        height: 800px;
+        top:-245px;
+        left:-415px;
+    }
+    
+    #woman-img-desktop{
+        width: 400px;
+        left: -65px;
+        top: 40px;
+        z-index: 2;
+    }
+
+    #box-img{
+        width: 170px;
+        top:148px;
+        left: -115px;
+        z-index: 5;
+    }
+
 }

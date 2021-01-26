@@ -7,7 +7,9 @@
 body{
     background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     min-height: 100vh;
+    width: 100vw;
     position: relative;
+    overflow: auto;
     font-family: 'Kumbh Sans', sans-serif
 }
 
@@ -18,9 +20,9 @@ body{
     min-height: 500px;
     border-radius: 25px;
     position: absolute;
-    top:70%;
+    top:20%;
     left:50%;
-    transform: translate(-50%, -70%);
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -108,4 +110,14 @@ li{
 
 .open{
     transform: rotate(180deg);
+}
+
+@media screen and (max-height: 490px){
+    body{
+        min-height: 170vh;
+    }
+
+    #container{
+        top: 20%;
+    }
 }
